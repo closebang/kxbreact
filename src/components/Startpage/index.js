@@ -1,6 +1,5 @@
 import React from 'react';
 import logo from './planetromeo.svg';
-import { connect } from 'react-redux';
 
 import { Layout } from 'antd';
 import LoginForm from './LoginForm';
@@ -13,10 +12,11 @@ const {
 } = Layout;
 
 
-function Startpage({form}) {
+function Startpage(props) {
 
-  const [formStatus] = useState(form);
+  const [formStatus] = useState(props.form);
 
+  console.log(props);
   return <div>
     <Header>
       <img src={logo} className="App-logo" alt="logo" style={{height:50}}/>
@@ -29,4 +29,4 @@ function Startpage({form}) {
   </div>
 }
 
-export default connect()(Startpage);
+export default Startpage;

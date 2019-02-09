@@ -1,7 +1,8 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 
-import startpage from '../Startpage';
+import startpage from '../../components/Startpage';
+
 import 'antd/dist/antd.css';
 
 

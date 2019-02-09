@@ -1,29 +1,20 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { Router } from 'react-router'
-import { Provider } from 'react-redux';
 import { shallow, mount } from 'enzyme';
 
-import App from '../../../components/Startpage';
-import { store, history } from '../../../store';
+import Startpage from '../../../components/Startpage';
+
 
 it('renders without crashing', () => {
-  shallow(<App/>);
+  shallow(<Startpage/>);
 });
 
 it('shows the logo', () => {
-  const wrapper = mount(<Provider store={store}>
-    <Router history={history}>
-      <App/>
-    </Router>
-  </Provider>);
-
+  const wrapper = mount(<Startpage/>);
   expect(wrapper.find('img').hasClass('App-logo')).toBe(true);
 });
 
 it('show the login form', () => {
-  const wrapper = mount(<Provider store={store}>
-    <Router history={history}>
-      <App/>
-    </Router>
-  </Provider>);
+  const wrapper = mount(<Startpage form="login" />);
+  expect(wrapper.find('.password').length).toBe(1);
 });
