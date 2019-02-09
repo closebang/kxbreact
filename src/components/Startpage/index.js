@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 function Startpage() {
   return <div>
     <img src={logo} className="App-logo" alt="logo" />
-    Start
   </div>
 }
 
