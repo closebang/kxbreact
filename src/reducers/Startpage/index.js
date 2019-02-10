@@ -1,6 +1,6 @@
 import { SHOW_LOGIN } from "../../constants/Startpage";
 
-export default function StartpageReducer(state = {}, action) {
+export default function Startpage(state = {}, action) {
   switch (action.type) {
     case SHOW_LOGIN:
       return {

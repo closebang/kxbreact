@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import startpageReducer from './Startpage/index';
+import startpage from './Startpage/index';
 
 export default combineReducers({
-  startpageReducer
+  startpage
 });

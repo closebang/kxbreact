@@ -15,6 +15,6 @@ it('shows the logo', () => {
 });
 
 it('show the login form', () => {
-  const wrapper = mount(<Startpage form="login" />);
+  const wrapper = mount(<Startpage startpage={{form: 'login'}}/>);
   expect(wrapper.find('.password').length).toBe(1);
 });

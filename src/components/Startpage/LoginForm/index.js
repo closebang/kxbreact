@@ -1,5 +1,5 @@
 import React from 'react';
-import { Input } from 'antd';
+import { Input, Button } from 'antd';
 
 function LoginForm() {
   return <div className="testing">
@@ -7,6 +7,7 @@ function LoginForm() {
     <Input/>
     <p className="password">Password</p>
     <Input/>
+    <Button>login</Button>
   </div>
 }
 

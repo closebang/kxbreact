@@ -12,17 +12,23 @@ const {
 } = Layout;
 
 
+function renderForm(props) {
+   if(!props.startpage) {
+     return (<RegisterForm {...props}/>);
+   } else if(props.startpage.form === 'login') {
+     return (<LoginForm {...props}/>);
+   }
+  return (<RegisterForm {...props}/>);
+}
+
 function Startpage(props) {
 
-  const [formStatus] = useState(props.form);
-
-  console.log(props);
   return <div>
     <Header>
       <img src={logo} className="App-logo" alt="logo" style={{height:50}}/>
     </Header>
     <Content>
-      {formStatus === 'login' ? <LoginForm/> : <RegisterForm />}
+      {renderForm(props)}
     </Content>
     <Sider/>
     <Footer/>

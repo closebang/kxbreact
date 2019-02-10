@@ -4,14 +4,11 @@ import { connect } from 'react-redux';
 import { Switch } from 'react-router-dom';
 import Routes from './Routes';
 
-function App(props) {
-
+function App() {
   return (
-      <div>
-        <Switch>
-          <Routes/>
-        </Switch>
-      </div>
+      <Switch>
+        <Routes/>
+      </Switch>
     );
 }
 
