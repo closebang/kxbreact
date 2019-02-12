@@ -1,8 +1,9 @@
-## Workshop 
+## Workshop
 https://docs.google.com/presentation/d/1j0uv6P7uypzgry9hcXPLWpq2eCJXRh-_UdjRp76VaQ4/edit?usp=sharing
 
-## Why testing is important
-![GitHub Logo](/doc/img/whyTestingExample1.png)
+## Doc
+
+[Start](./doc/index.md)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
