@@ -1,0 +1,15 @@
+:root {
+  --header-height: 150px;
+  --padding-border: 50px
+}
+
+.Header:global(.ant-layout-header) {
+  align-items: center;
+  display: flex;
+  height: var(--header-height);
+  justify-content: center;
+}
+
+.Content {
+  padding: var(--padding-border);
+}

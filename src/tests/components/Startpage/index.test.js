@@ -1,8 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
 import { Router } from 'react-router'
 import { shallow, mount } from 'enzyme';
 
 import Startpage from '../../../components/Startpage';
+import Logo from '../../../components/Logo';
 
 
 it('renders without crashing', () => {
@@ -11,7 +12,8 @@ it('renders without crashing', () => {
 
 it('shows the logo', () => {
   const wrapper = mount(<Startpage/>);
-  expect(wrapper.find('img').hasClass('App-logo')).toBe(true);
+  const logo = (<Logo/>)
+  expect(wrapper.contains(logo)).toEqual(true);
 });
 
 it('show the login form', () => {

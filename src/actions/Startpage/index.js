@@ -1,4 +1,4 @@
-import { SHOW_LOGIN } from "../../constants/Startpage";
+import { SHOW_LOGIN, LOGIN } from "../../constants/Startpage";
 
 export const showLogin = () => dispatch => {
   dispatch({
@@ -14,6 +14,17 @@ export const showRegister = () => dispatch => {
     type: SHOW_LOGIN,
     payload: {
       form: 'register'
+    }
+  })
+}
+
+export const login = (username, password) => dispatch => {
+  dispatch({
+    type: LOGIN,
+    payload: {
+      login: true,
+      username,
+      password
     }
   })
 }

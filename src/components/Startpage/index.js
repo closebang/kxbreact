@@ -1,11 +1,10 @@
 import React from 'react';
-import logo from './planetromeo.svg';
-
 import { Layout } from 'antd';
 import LoginForm from './LoginForm';
 import RegisterForm from './RegisterForm';
 
-import { useState } from 'react';
+import Logo from '../Logo';
+import style from './style.module.css';
 
 const {
   Header, Footer, Sider, Content,
@@ -13,9 +12,7 @@ const {
 
 
 function renderForm(props) {
-   if(!props.startpage) {
-     return (<RegisterForm {...props}/>);
-   } else if(props.startpage.form === 'login') {
+   if(props.startpage && props.startpage.form === 'login') {
      return (<LoginForm {...props}/>);
    }
   return (<RegisterForm {...props}/>);
@@ -24,10 +21,10 @@ function renderForm(props) {
 function Startpage(props) {
 
   return <div>
-    <Header>
-      <img src={logo} className="App-logo" alt="logo" style={{height:50}}/>
+    <Header className={style.Header}>
+      <Logo/>
     </Header>
-    <Content>
+    <Content className={style.Content}>
       {renderForm(props)}
     </Content>
     <Sider/>

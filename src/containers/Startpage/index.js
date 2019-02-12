@@ -19,7 +19,7 @@ class Startpage extends React.Component {
   }
 
   render() {
-    return <StartpageComponent onLoginClick={this.showLogin} {...this.props}/>
+    return <StartpageComponent onShowLogin={this.showLogin} {...this.props}/>
   }
 }
 

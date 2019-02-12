@@ -1,0 +1,27 @@
+:root {
+  --font-color: white;
+  --font-family: 'arial';
+  --font-size: 60px;
+  --border-thickness: 12px;
+  --border-radius: 5px;
+  --border-padding: 5px;
+}
+
+.Wrapper {
+  color: var(--font-color);
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  font-weight: bold;
+}
+
+.Name {
+  color: var(--font-color);
+  border: solid var(--border-thickness) var(--font-color);
+  border-radius: var(--border-radius);
+  display: inline;
+  padding: var(--border-padding);
+}
+
+.NameAfter {
+  margin-left: var(--border-padding);
+}
